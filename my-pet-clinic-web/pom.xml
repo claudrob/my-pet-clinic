@@ -4,7 +4,7 @@
     <parent>
         <groupId>my.edu</groupId>
         <artifactId>my-pet-clinic</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2-SNAPSHOT</version>
     </parent>
 
     <groupId>my.edu</groupId>
@@ -20,7 +20,7 @@
         <dependency>
             <artifactId>my-pet-clinic-data</artifactId>
             <groupId>my.edu</groupId>
-            <version>0.0.1</version>
+            <version>0.0.2-SNAPSHOT</version>
         </dependency>
 
 
