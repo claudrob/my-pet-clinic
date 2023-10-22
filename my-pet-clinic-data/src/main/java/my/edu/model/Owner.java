@@ -1,4 +1,4 @@
-package my.edu.mypetclinic.model;
+package my.edu.model;
 
 public class Owner extends Person{
 }
