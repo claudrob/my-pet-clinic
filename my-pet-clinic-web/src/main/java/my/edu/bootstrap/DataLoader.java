@@ -1,13 +1,9 @@
 package my.edu.bootstrap;
 
 import my.edu.model.Owner;
-import my.edu.model.Pet;
-import my.edu.model.PetType;
 import my.edu.model.Vet;
 import my.edu.services.OwnerService;
 import my.edu.services.VetService;
-import my.edu.services.map.OwnerServiceMap;
-import my.edu.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -20,9 +16,10 @@ public class DataLoader implements CommandLineRunner {
 //    private final SpecialtyService specialtyService;
 //    private final VisitService visitService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
 
@@ -47,6 +44,7 @@ public class DataLoader implements CommandLineRunner {
     }
 
     private void loadData() {
+        System.out.println("Load Data: " + ".".repeat(30));
 //        PetType dog = new PetType();
 //        dog.setName("Dog");
 //        PetType savedDogPetType = petTypeService.save(dog);
